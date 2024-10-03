@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/AddProductForm.tsx", "src/store/services/prodcutApi.js", "src/store/services/CategoryApi.js", "src/components/ui/badge.jsx", "src/components/SwiperSlide.jsx", "src/components/CategorySlide.jsx", "src/app/page.jsx", "src/app/admin/category/page.jsx", "src/app/admin/page.jsx", "src/app/cart/page.jsx", "src/app/product/[slug]/page.tsx", "src/app/admin/product/edit/[slug]/page.jsx", "src/store/cartSlice.js", "src/hooks/getProductBySlug.jsx", "src/models/orderSchema.js", "src/lib/getDataFromToken.js", "src/app/profile/page.jsx", "src/components/user/LoginForm.jsx", "src/components/user/RegistrationPage.jsx", "src/app/api/auth/register/route.ts", "src/app/auth/login/page.jsx", "src/app/admin/order/[id]/page.jsx", "src/app/admin/category/edit/[id]/page.jsx", "src/auth.js", "src/app/products/[category]/page.jsx"],
+  "exclude": ["node_modules"]
+}
