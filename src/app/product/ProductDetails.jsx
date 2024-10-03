@@ -55,7 +55,7 @@ const ProductPage = ({ slug }) => {
             <h1 className="sm:text-3xl text-xl font-bold mb-4">{product.name}</h1>
 
             {/* Product Price */}
-            <p className="text-xl sm:text-2xl text-green-600 font-semibold mb-4">
+            <p className="text-xl sm:text-2xl text-[#f30] font-semibold mb-4">
               ৳{product.price}
             </p>
 
