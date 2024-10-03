@@ -9,7 +9,7 @@ import {Provider,store} from "@/components/index"
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
 const inter = Inter({ subsets: ["latin"] });
-export const runtime = 'edge';
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://uniquestorebd.vercel.app/"),
   keywords:["unique store","unique store bd"],
