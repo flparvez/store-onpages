@@ -5,7 +5,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner"
 import {Provider,store} from "@/components/index"
-// test
+
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
 const inter = Inter({ subsets: ["latin"] });
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Unique Store - Ecommerce Application",
   description: "Ecommerce Application - by parvez",
 };
-
+export const runtime = "edge";
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -42,7 +42,7 @@ export default function RootLayout({
       
 
         </Provider>
-  
+    
         <Toaster richColors  position="top-right"/>
       </body>
     </html>

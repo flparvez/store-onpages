@@ -8,8 +8,10 @@ import { toast } from 'sonner';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import LiveChatButton from '@/components/custom/LiveChatButton';
+import LatestProductList from '@/components/custom/LatestProductList';
 
 const ProductPage = ({ slug }) => {
+  
   const { data } = useGetProductBySlugQuery(slug);
   const router = useRouter();
   const product = data?.product;
@@ -44,9 +46,17 @@ const ProductPage = ({ slug }) => {
             height={300}
             src={product.images}
             alt="Product Image"
-            className="w-full min-h-min md:h-[70%] sm:h-full h-80 object-cover rounded-md"
+            className="w-full h-96   object-cover rounded-md"
           />
+          {/* only lg */}
+          <div className='hidden lg:block'>
+         {/* Latest Product Section */}
+         <LatestProductList   />
+          </div>
+
+
         </div>
+  
 
         {/* Product Details */}
         <div className="flex flex-col justify-between">
@@ -91,7 +101,7 @@ const ProductPage = ({ slug }) => {
                 <div className="aspect-w-16 aspect-h-9">
                   <iframe
                     className="w-full lg:h-80 md:h-96 h-56 rounded-md"
-                    src={`https://www.youtube.com/embed/${product.video}?controls=0&showinfo=0&modestbranding=1&rel=0&autohide=1`}
+                    src={`https://www.youtube.com/embed/${product.video}?controls=0&showinfo=0&modestbranding=1&rel=0&autohide=1&autoplay=1`}
                     title="Product Video"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
@@ -127,6 +137,12 @@ const ProductPage = ({ slug }) => {
 
       {/* Live Chat Button */}
       <LiveChatButton />
+
+        {/* only lg */}
+        <div className='lg:hidden block'>
+         {/* Latest Product Section */}
+         <LatestProductList   />
+          </div>
     </div>
   );
 };

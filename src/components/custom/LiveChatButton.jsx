@@ -5,15 +5,15 @@ import { FaFacebookMessenger } from 'react-icons/fa';
 
 const LiveChatButton = () => {
   return (
-    <div className="fixed bottom-16 right-4 z-50">
+    <div className="fixed bottom-20 right-4 z-50">
       <Link target='_blank' href="https://www.facebook.com/uniquestorebd23" passHref>
-        <h
-          target="_blank"
+        <h1
+          
           rel="noopener noreferrer"
           className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition duration-300"
         >
           <FaFacebookMessenger size={24} />
-        </h>
+        </h1>
       </Link>
     </div>
   );

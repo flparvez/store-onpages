@@ -7,7 +7,6 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
-
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
@@ -55,7 +54,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.13.3",
+    "@cloudflare/next-on-pages": "^1.13.5",
     "@next/bundle-analyzer": "^14.2.14",
     "@types/mongoose": "^5.11.97",
     "@types/node": "^20",

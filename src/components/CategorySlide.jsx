@@ -26,7 +26,7 @@ const CategorySlides = () => {
         centeredSlides={true}
         parallax={true}
         autoplay={{
-          delay: 1000,
+          delay: 1200,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -35,9 +35,9 @@ const CategorySlides = () => {
         breakpoints={{
           320: { slidesPerView: 2, spaceBetween: 10 },
           480: { slidesPerView: 2, spaceBetween: 10 },
-          640: { slidesPerView: 2, spaceBetween: 20 },
-          768: { slidesPerView: 2, spaceBetween: 20 },
-          1024: { slidesPerView: 3, spaceBetween: 30 },
+          640: { slidesPerView: 3, spaceBetween: 20 },
+          768: { slidesPerView: 3, spaceBetween: 20 },
+          1024: { slidesPerView: 4, spaceBetween: 30 },
           1280: { slidesPerView: 4, spaceBetween: 40 },
         }}
         navigation={true}
@@ -45,15 +45,15 @@ const CategorySlides = () => {
         className="mySwiper"
       >
 
-<div className="container mx-auto px-4 py-8">
+<div className="container mx-auto px-4 ">
 <div className="flex overflow-x-scroll scrollbar-hide">
          {data?.map((category) => (
        
              
              <SwiperSlide key={category._id}>
-         <div className="flex-shrink-0 w-48 h-48 m-2 bg-white rounded-lg shadow-md overflow-hidden">
+         <div className="flex-shrink-0 w-48 h-48  bg-white rounded-lg shadow-md overflow-hidden">
           <Link href={`/products/${category?.slug?.toLowerCase()}`}>
-      <Image width={300} height={128} src={category.image} alt={category.title} className="w-full h-32 object-cover" />
+      <Image width={300} height={128} src={category.image} alt={category.title} className="w-full h-32 object-cover rounded" />
       <div className="p-2">
         <h3 className="text-lg font-semibold text-center">{category.title}</h3>
       </div>

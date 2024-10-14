@@ -14,7 +14,7 @@ const Home = () => {
   
   const {data} = useGetProductsQuery()
   const products = data?.products;
-  const productsSlider = data?.products?.slice(0, 10);
+  const productsSlider = data?.products?.slice(11, 20);
 
 if (!products) return <Loading />
   return (
@@ -27,35 +27,33 @@ if (!products) return <Loading />
  
  {/* Featured Products And Category With Link */}
    <div className="">
-  {
-  productsSlider && productsSlider.length > 0
-            ? 
+
+ 
                 <SwiperSlides
                 
                   products= {productsSlider}
                   
                 />
               
-            : null
-            }
+        
             </div>
            
               </div>
               {/* Category Slider With Link */}
-              <div className=''>
-              <div className='flex justify-center mb-8'>
-              <button className='py-3 px-6 mt-14 text-white bg-black  rounded-md'> Category</button>
-  
-    </div>
              
+              <div className=' my8'>
+              <h2 className="text-3xl font-bold text-center mb-8"> Category</h2>
 
-          <CategorySlides  />
+             
+   
+    <CategorySlides  />
+        
     </div>
 
     {/* Product List Product Category Button */}
  
       <div className='flex justify-center'>
-        <button className='py-3 px-6 mt-14 text-white bg-black rounded-md'>All Products</button>
+        <button className='py-3 px-6 mt-14 text-white bg-black rounded-md'>Latest Products</button>
   
     </div>
   
